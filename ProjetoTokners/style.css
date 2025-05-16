@@ -1,0 +1,403 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f5f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: relative; 
+}
+
+.vector {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.cabeça {
+    display: flex;
+    align-items: center;
+
+}
+
+.cabeça li {
+    display: inline-block;
+    margin: 0 15px; /* Espaçamento horizontal */
+    list-style: none; /* Remove os marcadores padrão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-family: 'Trebuchet MS', Arial, sans-serif; /* Fonte moderna */
+    font-weight: bold; /* Deixa o texto mais destacado */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.cabeça li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333; /* Cor inicial do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+}
+
+.cabeça li a:hover {
+    background-color: #ff6ec4; /* Fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+}
+
+.cabeça li:hover {
+    transform: translateY(-3px); /* Sobe levemente ao passar o mouse */
+}
+
+/* Estilo aprimorado para o botão */
+.btn {
+    color: #fff; /* Cor do texto */
+    font-size: 18px;
+    margin: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bordas arredondadas */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Gradiente de fundo */
+    border: none; /* Remove a borda padrão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Animação ao passar o mouse */
+.btn:hover {
+    transform: translateY(-5px); /* Sobe levemente */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    background: linear-gradient(45deg, #7873f5, #ff6ec4); /* Inverte o gradiente */
+}
+
+/* Animação ao clicar */
+.btn:active {
+    transform: translateY(2px); /* Move levemente para baixo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Reduz a sombra */
+}
+
+
+main {
+    color: white;
+    padding-top: 20px;
+    min-height: 100vh;
+    background: linear-gradient(45deg, orange 30%, rgb(240, 241, 152) 70%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 25% 0 25% 0;
+}
+
+.vector2 {
+    position: absolute;
+    top: 700px;
+    left: -260px;
+    rotate: 40deg;
+}
+
+
+.apresentation1 {
+    transform: translateY(8em);
+}
+
+.apresentation1 h1 {
+    color: #000000;
+    text-align: center;
+
+    span {
+        color: rgb(170, 1, 254);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+.apresentation1 p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #000000;
+
+
+    span {
+        color: blueviolet;
+        font-size: 20px;
+    }
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    }
+
+    article {
+        margin-top: 10em;
+    }
+
+    
+@keyframes subirDescer {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial e final */
+    }
+    50% {
+        transform: translateY(-20px); /* Sobe 20px */
+    }
+}
+
+/* Aplica a animação ao formulário */
+form {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    background-color: #1d1534;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* Centraliza o formulário */
+    animation: subirDescer 3s ease-in-out infinite; /* Aplica a animação */
+
+}
+    
+    form label {
+        display: block;
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    form input {
+        width: 87%;
+        padding: 20px;
+        margin-bottom: 15px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #fff;
+        font-size: 1rem;
+    }
+    
+    form input:focus {
+        outline: none;
+        border-color: #ff9800; /* Destaque laranja */
+        box-shadow: 0 0 5px #ff9800;
+    }
+    
+    form button {
+        width: 100%;
+        padding: 20px;
+        background-color: #ea00ff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+    
+    form button:hover {
+        background-color: #e68900;
+    }
+
+.final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1834;
+    border-radius: 60% 0 0 0;
+}
+
+.text-apresentation {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 100px 0 100px;
+    width: 650px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    span {
+        color: blueviolet;
+    }
+
+    .bttn {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5); /* Gradiente de fundo */
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    }
+}
+
+.cards-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    background-color: #1d1834;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+.card {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transform: translateY(-0px);
+    width: 280px;
+    height: 400px;
+    background: linear-gradient(45deg, #ff9900);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333; 
+    font-weight: bold;
+    font-family: monospace ;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666; 
+    margin-bottom: 15px;
+    line-height: 1.5; 
+}
+
+.card button {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5); 
+    color: #fff;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.card button:hover {
+    background: linear-gradient(45deg, #7873f5, #ff6ec4); 
+    transform: scale(1.1); 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes subirDescer {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: subirDescer 3s ease-in-out infinite; 
+}
+
+.subtract-final {
+    position: absolute;
+    right: -230px;
+    top: 280px;
+    rotate: -38deg;
+}
+
+footer {
+    background-color: #f2f0f4;
+    color: #000;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 0 0 0 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-links a {
+    color: #000;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #555;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social a img {
+    width: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+}
